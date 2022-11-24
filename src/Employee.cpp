@@ -4,6 +4,7 @@
 // Nota: Nenhuma definição recebe funções virtuais puras.
 #include <iostream>
 using std::cout;
+using std::endl;
 
 #include "Employee.hpp" // Definição da classe Employee
 
@@ -15,41 +16,42 @@ Employee::Employee( const string &first, const string &last, const string &ssn )
 
 //configura o nome
 void Employee::setFirstName(const string &first){
-	//seu código aqui
+	this->firstName = first;
 }
 
 //retorna o nome
 string Employee::getFirstName() const{
-	//seu código aqui
+	return this->firstName;
 } 
 
 // configura o sobrenome
 void Employee::setLastName( const string &last )
 {
-		//seu código aqui
+	this->lastName = last;
 
 } // fim da função setLastName
 
 // retorna o sobrenome
 string Employee::getLastName() const{
-	   	//seu código aqui
+	return this->lastName;
 } // fim da função getLastName
 
 // configura o SSN
 void Employee::setSocialSecurityNumber( const string &ssn )
 {
-		//seu código aqui
-		// deve validar
+	this->socialSecurityNumber = ssn;
 } // fim da função setSocialSecurityNumber
 
 // retorna o SSN
 string Employee::getSocialSecurityNumber() const
 {
-		//seu código aqui
+	return this->socialSecurityNumber;
 } // fim da função getSocialSecurityNumber
 
 // imprime informações de Employee (virtual, mas não virtual pura)
 void Employee::print() const
 {
-	//seu código aqui
+	cout << "Name: " << this->firstName << " " << this->lastName << endl;
+	cout << "SSN: " << this->socialSecurityNumber << endl;
 } // fim da função print
+

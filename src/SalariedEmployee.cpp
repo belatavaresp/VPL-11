@@ -6,40 +6,36 @@ using std::cout;
 #include "SalariedEmployee.hpp" // definição da classe SalariedEmployee
 
 // construtor
-	SalariedEmployee::SalariedEmployee( const string &first,
-		const string &last, const string &ssn, double salary )
-		: Employee( first, last, ssn )
-	{
-		//seu código aqui
+SalariedEmployee::SalariedEmployee( const string &first,
+	const string &last, const string &ssn, double salary )
+	: Employee( first, last, ssn )
+{
+	setWeeklySalary(salary);
+}// fim do construtor SalariedEmployee
 	
-	}// fim do construtor SalariedEmployee
+// configura o salário
+void SalariedEmployee::setWeeklySalary( double salary ){
+	this->weeklySalary = salary;
+} // fim da função setWeeklySalary
 	
-	// configura o salário
-	void SalariedEmployee::setWeeklySalary( double salary ){
-			//seu código aqui
-		
-	} // fim da função setWeeklySalary
-	
-	
-	// retorna o salário
-	double SalariedEmployee::getWeeklySalary() const
-	{
-		//seu código aqui
-	
+// retorna o salário
+double SalariedEmployee::getWeeklySalary() const
+{
+	return this->weeklySalary;
 } // fim da função getWeeklySalary
 
 // calcula os rendimentos;
 // sobrescreve a função virtual pura earnings em Employee
 double SalariedEmployee::earnings() const
 {
-			//seu código aqui
+	return this->weeklySalary;
 } // fim da função earnings
 	
 // imprime informações de SalariedEmployee
 void SalariedEmployee::print() const
 {
-	//seu código aqui
-	
+	Employee::print();
+	cout << "Weekly Salary: " << this->weeklySalary << std::endl;
 }// fim da função print
 	
 	
