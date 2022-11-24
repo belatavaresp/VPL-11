@@ -19,7 +19,7 @@ void Employee::setFirstName(const string &first){
 }
 
 //retorna o nome
-void Employee::getFirstName() const{
+string Employee::getFirstName() const{
 	//seu código aqui
 } 
 

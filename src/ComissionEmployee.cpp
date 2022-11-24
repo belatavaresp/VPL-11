@@ -3,7 +3,7 @@
 #include <iostream>
 using std::cout;
 
-#include "CommissionEmployee.h" // definição da classe CommissionEmployee
+#include "ComissionEmployee.hpp" // definição da classe CommissionEmployee
 
 // construtor
 	CommissionEmployee::CommissionEmployee( const string &first,
@@ -34,10 +34,10 @@ double CommissionEmployee::getGrossSales() const
 double CommissionEmployee::earnings() const
 {
 	//seu código aqui
-46 } // fim da função earnings
-47
-48 // imprime informações do CommissionEmployee
-49 void CommissionEmployee::print() const
-50 {
-51 	//seu código aqui
-55 } // fim da função print
+} // fim da função earnings
+
+// imprime informações do CommissionEmployee
+void CommissionEmployee::print() const
+{
+	//seu código aqui
+} // fim da função print

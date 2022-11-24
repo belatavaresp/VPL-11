@@ -15,8 +15,8 @@ using std::vector;
 #include "Employee.hpp"
 #include "SalariedEmployee.hpp"
 #include "HourlyEmployee.hpp"
-#include "CommissionEmployee.hpp"
-#include "BasePlusCommissionEmployee.hpp"
+#include "ComissionEmployee.hpp"
+#include "BasePlusComissionEmployee.hpp"
 
 void virtualViaPointer( const Employee * const ); // protótipo
 void virtualViaReference( const Employee & ); // protótipo
@@ -35,17 +35,17 @@ int main()
 	BasePlusCommissionEmployee basePlusCommissionEmployee(
 	"Bob", "Lewis", "444-44-4444", 5000, .04, 300 );
 
-	cout << "Employees processed individually using static binding:\n\n”;
+	cout << "Employees processed individually using static binding:\n\n";
 
 	// gera saída de informações e rendimentos dos Employees com vinculação estática
 	salariedEmployee.print();
-	cout << "\nearned $" << salariedEmployee.earnings() << "\n\n”;
+	cout << "\nearned $" << salariedEmployee.earnings() << "\n\n";
 	hourlyEmployee.print();
-	cout << "\nearned $" << hourlyEmployee.earnings() << "\n\n”;
+	cout << "\nearned $" << hourlyEmployee.earnings() << "\n\n";
 	commissionEmployee.print();
-	cout << "\nearned $" << commissionEmployee.earnings() << "\n\n”;
+	cout << "\nearned $" << commissionEmployee.earnings() << "\n\n";
 	basePlusCommissionEmployee.print();
-	cout << "\nearned $" << basePlusCommissionEmployee.earnings() << "\n\n;
+	cout << "\nearned $" << basePlusCommissionEmployee.earnings() << "\n\n";
 
 	// cria um vector a partir dos quatro ponteiros da classe básica
  	vector < Employee * > employees( 4 );

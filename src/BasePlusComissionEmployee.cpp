@@ -4,7 +4,7 @@
 using std::cout;
 
 // definição da classe BasePlusCommissionEmployee
-#include "BasePlusCommissionEmployee.hpp"
+#include "BasePlusComissionEmployee.hpp"
 
 // construtor
 	BasePlusCommissionEmployee::BasePlusCommissionEmployee(

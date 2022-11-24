@@ -3,7 +3,7 @@
 #ifndef BASEPLUS_HPP
 #define BASEPLUS_HPP
 
-#include "CommissionEmployee.hpp" // definição da classe CommissionEmployee
+#include "ComissionEmployee.hpp" // definição da classe CommissionEmployee
 
 class BasePlusCommissionEmployee : public CommissionEmployee
 {
